@@ -16,8 +16,8 @@ RUN apt-get update && \
     make VIMRUNTIMEDIR=/usr/share/vim/vim74 && \
     make install \
 RUN \
-    git clone https://github.com/gmarik/Vundle.vim.git \
-      ~/.vim/bundle/Vundle.vim && \
+    git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
 RUN git clone https://github.com/scotthelm/govim.git ~/
 
 RUN vim -E -u NONE -S ~/.vimrc +PluginInstall +GoInstallBinaries +qa || true
