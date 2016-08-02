@@ -39,9 +39,9 @@ let g:airline_symbols.space = "\ua0"
 let g:airline_powerline_fonts = 1
 let g:Powerline_symbols = 'fancy'
 
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+" set statusline+=%#warningmsg#
+" set statusline+=%{SyntasticStatuslineFlag()}
+" set statusline+=%*
 
 " ------------------------------------------------------------------------------
 "  Tabs/Spaces
