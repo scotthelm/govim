@@ -17,7 +17,7 @@ Plugin 'ctrlp.vim'
 Plugin 'tpope/vim-endwise'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'ervandew/supertab'
-Plugin 'fatih/vimgo'
+Plugin 'fatih/vim-go'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
