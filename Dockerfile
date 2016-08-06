@@ -18,12 +18,16 @@ RUN apt-get update && \
 
 RUN git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
+RUN echo 'running'
+
 RUN \
     git clone https://github.com/scotthelm/govim.git /tmp/govim && \
     cp /tmp/govim/.vimrc ~/ && \
-    cp /tmp/govim/.bashrc ~/
+    cp /tmp/govim/.bashrc ~/ && \
+    cp /tmp/govim/.vimrc_background ~
 
-RUN vim -E -u NONE -S ~/.vimrc +PluginInstall +GoInstallBinaries +qa || true
+RUN vim -E -u NONE -S ~/.vimrc +PluginInstall + qa || true
+RUN vim -E +GoInstallBinaries + qa || true
 RUN mkdir -p /go/src/github.com/scotthelm/
 
 RUN \
