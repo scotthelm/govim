@@ -29,6 +29,10 @@ set nobackup
 set nowritebackup
 set noswapfile
 set number
+set shell=sh
+set t_Co=256
+syntax on
+syntax enable
 
 "-------------------------------------------------------------------------------
 " basics
