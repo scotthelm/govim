@@ -1,4 +1,4 @@
-alias nv='
+alias govim='
   docker run \
     -it \
     --rm \
@@ -7,5 +7,5 @@ alias nv='
     -v $HOME/.docker:/root/.docker:ro \
     -v /var/run/docker.sock:/var/run/docker.sock \
     -e "DOCKER_HOST_URL=$DOCKER_HOST" \
-    nv'
+    scotthelm/govim'
 
