@@ -16,13 +16,12 @@ RUN apt-get update && \
     make VIMRUNTIMEDIR=/usr/share/vim/vim74 && \
     make install
 
+COPY .* /root/
+ENV LC_ALL=C.UTF-8
+
 RUN \
     git clone https://github.com/gmarik/Vundle.vim.git \
         ~/.vim/bundle/Vundle.vim && \
-    git clone https://github.com/scotthelm/govim.git /tmp/govim && \
-    cp /tmp/govim/.vimrc ~/ && \
-    cp /tmp/govim/.bashrc ~/ && \
-    cp /tmp/govim/.vimrc_background ~ && \
     vim -E -u NONE -S ~/.vimrc +PluginInstall +GoInstallBinaries +qa\
         || true && \
     mkdir -p /go/src/github.com/scotthelm/ && \
