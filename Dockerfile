@@ -23,8 +23,8 @@ RUN \
     cp /tmp/govim/.vimrc ~/ && \
     cp /tmp/govim/.bashrc ~/ && \
     cp /tmp/govim/.vimrc_background ~ && \
-    vim -E -u NONE -S ~/.vimrc +PluginInstall + qa || true && \
-    vim -E +GoInstallBinaries + qa || true && \
+    vim -E -u NONE -S ~/.vimrc +PluginInstall +GoInstallBinaries +qa\
+        || true && \
     mkdir -p /go/src/github.com/scotthelm/ && \
     git clone https://github.com/chriskempson/base16-shell.git \
       ~/.config/base16-shell
