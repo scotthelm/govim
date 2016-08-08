@@ -152,3 +152,9 @@ au FileType go nmap <Leader>gd <Plug>(go-doc)
 au FileType go nmap <Leader>gv <Plug>(go-doc-vertical)
 
 let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
+
+" ------------------------------------------------------------------------------
+"  Syntastic
+" ------------------------------------------------------------------------------
+let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
+let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
