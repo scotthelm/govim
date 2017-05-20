@@ -1,4 +1,4 @@
-FROM golang:latest
+FROM golang:1.8
 
 WORKDIR /vim
 RUN apt-get update && \
